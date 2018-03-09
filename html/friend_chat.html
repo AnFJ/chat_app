@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" type="text/css" href="../css/global_size.css">
+	<link rel="stylesheet" type="text/css" href="../css/friend_chat.css">
+	<link rel="stylesheet" type="text/css" href="../css/animation.css">
+	<title>好友框</title>
+</head>
+<body>
+<div class="search">
+	<div class="search_choose_div"  >
+		<div class="search_choose_setting_container" onclick="appearDiv('search_choose_bottom')">	
+			<div class="search_choose_setting" id="choose_friend_setting">点击此处管理好友</div>
+		</div>
+		<div id="search_choose_bottom">
+			<div class="search_choose_setting_container" id="add_friend_containner">
+				<div class="search_choose_setting" id="add_friend" onclick="addFriendChoose(this,'add')">添加好友</div>
+				<div class="up_arrow"></div>
+			</div>
+			<div class="cutting_line"></div>
+			<div class="search_choose_setting_container">
+				<div class="search_choose_setting" id="delete_friend" onclick="addFriendChoose(this,'delete')">删除好友</div>
+			</div>
+		</div>
+	</div>
+	<div class="search_input_container" id='search_input_container'>
+		<input type="text" id='friend_setting_input' name="friend_input" placeholder="请先选择好友设置" >
+		<button id="friend_button">确定</button>
+	</div>
+</div>
+<div class="friend_list_container" id="friend_list_container">
+	<div class="friend_list_head"></div> 
+	<div class="friend_list" onclick="window.location.href='../main.html'">
+		<img src="../image/user_display_photo/udp.jpg">
+		<h3>好友的昵称</h3>
+		<p>这是一条好友的签名</p>
+		<div class="friend_online_state"></div>
+	</div>
+	<div class="friend_list">
+		<img src="../image/user_display_photo/udp.jpg">
+		<div class="friend_offline_state"></div>
+		<h3>好友的昵称好友的昵称好友的昵称好友的昵称
+		好友的昵称好友的昵称好友的昵称好友的昵称</h3>
+		<p>这个人很懒，没有留下任何的签名
+		这个人很懒，没有留下任何的签名
+		这个人很懒，没有留下任何的签名
+		这个人很懒，没有留下任何的签名</p>
+	</div>
+
+</div>
+ 
+</body>
+<script type="text/javascript" src='../script_ui/animation.js'></script>
+<script type="text/javascript" src='../script_ui/main_ui.js'></script>
+<script type="text/javascript" src='../script/update_chat.js'></script>
+<script type="text/javascript" src='../script/account_setting.js'></script>
+<script type="text/javascript">
+	// var friendList=[{"friend_account":"3","friend_info":{"user_name":"\u5c0f\u4e09","user_info":null},"friend_state":"offline"},{"friend_account":"4","friend_info":{"user_name":"\u5c0f\u56db","user_info":null},"friend_state":"online"},{"friend_account":"5","friend_info":{"user_name":"\u5c0f\u4e94","user_info":null},"friend_state":"offline"},{"friend_account":"6","friend_info":{"user_name":"\u5c0f\u516d","user_info":null},"friend_state":"offline"},{"friend_account":"7","friend_info":{"user_name":"\u5c0f\u4e03","user_info":null},"friend_state":"offline"},{"friend_account":"1","friend_info":{"user_name":"\u5c0f\u4e00","user_info":null},"friend_state":"offline"},{"friend_account":"1","friend_info":{"user_name":"\u5c0f\u4e00","user_info":null},"friend_state":"online"},{"friend_account":"2","friend_info":{"user_name":"\u5c0f\u4e8c","user_info":null},"friend_state":"offline"}];
+	var add_friend=document.getElementById('add_friend').parentNode;
+	var delete_friend=document.getElementById('delete_friend').parentNode;
+	window.onload=function(){
+		setSearchWidth("friend_setting_input","search_input_container","friend_button");
+		 updateFriendList();
+		// alert(window.localStorage.friendState);
+	}
+	window.onresize=function(){
+		setSearchWidth("friend_setting_input","search_input_container","friend_button");
+	}
+	add_friend.onclick=function(){
+		disappearDiv("search_choose_bottom");
+	};
+	delete_friend.onclick=function(){
+		disappearDiv("search_choose_bottom");
+	};
+	setInterval(function(){
+		if(window.localStorage.friend_state=="true")
+		{
+			window.localStorage.friend_state="false";
+			updateFriendList();
+		}
+	},1000);
+</script>
+</html>

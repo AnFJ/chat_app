@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" type="text/css" href="../css/global_size.css">
+	<link rel="stylesheet" type="text/css" href="../css/my_info.css">
+	<title></title>
+</head>
+<body>
+	<div class="container">
+		<div class="display_photo">
+			<div class="background"></div>
+			<div class="display_photo_container">
+				<img src="../image/user_display_photo/change_udp.png" alt="" id="change_udp">
+				<img src="../image/user_display_photo/udp.jpg" alt="">
+			</div>
+			<div class="user_info">
+				<h3>安方军的昵称</h3>
+				<p>15736641436</p>
+				<h4>安方军的签名</h4>	
+			</div>
+		</div>
+		<div class="menu_container">
+			<div class="account_info" id="user_display_photo">
+				<div class="left_position">头像</div>
+				<div class="right_position"></div>
+			</div>
+			<div class="account_info" id="user_name">
+				<div class="left_position">昵称</div>
+				<div class="right_position">安方军的昵称</div>
+			</div>
+			<div class="account_info" id="user_account">
+				<div class="left_position">账号</div>
+				<div class="right_position">15736641436</div>
+			</div>
+			<div class="account_info" id="user_signature">
+				<div class="left_position">签名</div>
+				<div class="right_position">安方军的签名</div>
+			</div>
+		</div>
+		<div class="menu_container">
+			<div id='menu_container'>修改密码</div>
+		</div>
+		<div class="menu_container" id='exit_account' onclick="exitAccount(this)">
+			<div class="exit_account">退出登录</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src='../script_ui/main_ui.js'></script>
+<script type="text/javascript" src='../script/update_chat.js'></script>
+<script type="text/javascript">
+	window.onload=function(){
+		// alert("ok");
+		getUserInfo();
+		// setUDPHeight('display_photo_container');
+		setUDPHeight('display_photo');
+		setUDPHeight('background');
+	}
+	window.onresize=function(){
+		// setUDPHeight('display_photo_container');
+		setUDPHeight('display_photo');
+		setUDPHeight('background');
+	}
+</script>
+</html>

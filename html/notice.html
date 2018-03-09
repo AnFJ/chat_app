@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<script type="text/javascript" src='../script/global_data.js'></script>
+<head>
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" type="text/css" href="../css/global_size.css">
+	<link rel="stylesheet" type="text/css" href="../css/notice.css">
+	<meta charset="utf-8">
+	<title>消息通知页</title>
+</head>
+<body>
+	<div class="notice_list_container" >
+		<!-- <div class="notice_container" onclick="alert(gloabal_data);">
+			<img class="display_photo" src="../image/user_display_photo/udp.jpg" >
+			<h3 class="notice_name">安方军的通知</h3>
+			<div class="lasted_info">安方军发来了一条消息</div>
+			<div class="lasted_time">12:21 5/3</div>
+			<img class="notice_number" src="../image/notice_number/01.png" >
+		</div> -->
+	</div>
+</body>
+<script type="text/javascript" src='../script/update_chat.js'></script>
+<script type="text/javascript">
+	window.onload=function(){
+		getNoticeMessage();
+	}
+	setInterval(function(){
+		if(window.localStorage.notice_state=="true")
+		{
+			window.localStorage.notice_state="false";
+			getNoticeMessage();
+		}
+	},100);
+</script>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>登陆页</title>
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" type="text/css" href="../css/global_size.css">
+	<link rel="stylesheet" type="text/css" href="../css/login.css">
+</head>
+<body>
+	<div class="login_container">
+		<div class="login_title"></div>
+		<div class="login_inner_container">
+			<form class="login_div" id="login_div" name="sign_up" method="post" action="../php_server/sign_up.php">
+				<input type="text" name="user_account" id="user_account" placeholder="账号"></input>
+				<input type="password" name="user_password" id="user_password" placeholder="密码"></input>
+				<input id="login_button" type="submit" value="LOGIN" />
+				<div class="login_setting">
+					<p id="save_user_account">记住我</p>
+					<a href="register.html">新用户注册</a>
+				</div>
+			</form>
+		</div>
+		<div class="buttom_agree_info" id="buttom_agree_info">
+			<p>我已经阅读并同意<a href="#">作者声明</a></p>
+		<div>
+	</div>
+</body>
+<script type="text/javascript" src='../script_ui/main_ui.js'></script>
+<script type="text/javascript">
+	window.onload=function(){
+		setInputWidth('user_account','login_div');
+		setInputWidth('user_password','login_div');
+		setAgreeUsePosition('buttom_agree_info');
+	}
+	window.onresize=function(){
+		setInputWidth('user_account','login_div');
+		setInputWidth('user_password','login_div');
+		setAgreeUsePosition('buttom_agree_info');
+	}
+</script>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" type="text/css" href="../css/global_size.css">
+	<link rel="stylesheet" type="text/css" href="../css/group_chat.css">
+	<title></title>
+</head>
+<body>
+<div class="group_container"  name="first">
+	<div class="group_choose" onclick="changeListContanier(this)">
+		<p>我创建的群</p>
+		<div></div>
+	</div>
+	<div class="group_list_container" id="group_lord" style="display: none;">
+		<div class="group_list">
+			<img src="../image/icon/group_display_photo.png">
+			<h3>安方军的群</h3>
+			<p>2017/4/23</p>
+		</div>
+	</div>
+</div>
+<div class="group_container"  name="second">
+	<div class="group_choose" onclick="changeListContanier(this)">
+		<p>我加入的群</p>
+		<div></div>
+	</div>
+	<div class="group_list_container" id="group_member" style="display: none;">
+		<div class="group_list">
+			<img src="../image/icon/group_display_photo.png">
+			<h3>安方军的群</h3>
+			<p>2017/4/23</p>
+		</div>
+	</div>
+</div>
+<div class="group_setting_container">
+	<div class="group_setting">
+		<div class="group_choose" onclick="changeListContanier(this)">
+			<p>加入群</p>
+			<div></div>
+		</div>
+		<div class="group_choose_setting" style="display: none;">
+			<input id="add_group_account" type="text"  placeholder="请输入群聊账号" />
+			<button id="add_group_btn" onclick="addGroup(this)">加入群</button>
+		</div>
+	</div>
+	<div class="group_setting" name="type1">
+		<div class="group_choose" onclick="changeListContanier(this)">
+			<p>退出群</p>
+			<div></div>
+		</div>
+		<div class="group_choose_setting" style="display: none;">
+			<input id="exit_group_account" type="text"  placeholder="请输入群聊账号" />
+			<button id="exit_group_btn" onclick="exitGroup(this)">退出群</button>
+		</div>
+	</div>
+	<div class="group_setting" name="type1">
+		<div class="group_choose" onclick="changeListContanier(this)">
+			<p>新建群</p>
+			<div></div>
+		</div>
+		<div class="group_choose_setting" name="more_input" style="display: none;">
+			<input name="first_inout" id="create_group_account" type="text"  placeholder="请输入群聊账号" />
+			<input name="second_input" id="create_group_name" type="text"  placeholder="请输入群聊名称" />
+			<button name="button" id="create_group_btn" onclick="createGroup(this)">新建群</button>
+		</div>
+	</div>
+	<div class="group_setting">
+		<div class="group_choose" onclick="changeListContanier(this)">
+			<p>解散群</p>
+			<div></div>
+		</div>
+		<div class="group_choose_setting" style="display: none;">
+			<input id="delete_group_account" type="text"  placeholder="请输入群聊账号" />
+			<button id="delete_group_btn" onclick="deleteGroup(this)">解散群</button>
+		</div>
+	</div>
+	<div class="group_setting">
+		<div class="group_choose" onclick="changeListContanier(this)">
+			<p>删除群成员</p>
+			<div></div>
+		</div>
+		<div class="group_choose_setting" name="more_input" style="display: none;">
+			<input name="first_inout" id="delete_member_group_account" type="text"  placeholder="请输入群聊账号" />
+			<input name="second_input" id="delete_member_account" type="text"  placeholder="请输入群成员账号" />
+			<button name="button" id="delete_group_member_btn" onclick="deleteGroupMember(this)">删除群成员</button>
+		</div>
+	</div>
+</div>
+</body>
+<script type="text/javascript" src='../script_ui/main_ui.js'></script>
+<script type="text/javascript" src='../script/update_chat.js'></script>
+<script type="text/javascript" src='../script/account_setting.js'></script>
+<script type="text/javascript">
+	// var groupList=[{"group_account":"3","group_info":{"group_id":"16","group_account":"3","group_name":"\u4e09\u7fa4","group_lord":"1","group_info":null,"create_date":"2017-04-13 15:48:07"},"group_members":[["1"]]},{"group_account":"2","group_info":{"group_id":"17","group_account":"2","group_name":"\u4e8c\u7fa4","group_lord":"1","group_info":null,"create_date":"2017-04-13 15:49:01"},"group_members":[["1"]]},{"group_account":"1","group_info":{"group_id":"19","group_account":"1","group_name":"\u4e00\u7fa4","group_lord":"8","group_info":null,"create_date":"2017-04-13 17:12:40"},"group_members":[["8"],["1"]]}]
+	window.onload=function(){
+		setGroupInputWidth("group_choose_setting");
+		updateGroupList();
+	}
+	window.onresize=function(){
+		setGroupInputWidth("group_choose_setting");
+	}
+	setInterval(function(){
+		if(window.localStorage.group_state=="true")
+		{
+			window.localStorage.group_state="false";
+			updateGroupList();
+		}
+	},100);
+</script>
+</html>

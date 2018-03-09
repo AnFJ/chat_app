@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>注册页</title>
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" type="text/css" href="../css/global_size.css">
+	<link rel="stylesheet" type="text/css" href="../css/register.css">
+</head>
+<body>
+	<div class="back_nav">
+		<img src="../image/icon/back.png" onclick="window.location.href='login.html';">
+	</div>
+	<div class="register_container">
+		<form class="register_form" id="register_form" name="register" method="post" action="../php_server/add_account.php">
+			<input name="user_account" id='user_account' type="text" placeholder="账号" required="required">
+			<input name="user_name" id='user_name' type="text" placeholder="昵称" required="required">
+			<input name="user_password" id='user_password' type="password" placeholder="密码" required="required">
+			<input name="user_confirm" id='user_confirm' type="password" placeholder="确认密码" required="required">
+			<input class="register_button" type="reset" placeholder="重置">
+			<input class="register_button" id="submit" type="submit" placeholder="确认">
+		</form>
+	</div>
+</body>
+<script type="text/javascript" src='../script_ui/main_ui.js'></script>
+<script type="text/javascript">
+	window.onload=function(){
+		setInputWidth('user_account','register_form');
+		setInputWidth('user_name','register_form');
+		setInputWidth('user_password','register_form');
+		setInputWidth('user_confirm','register_form');
+	}
+	window.onresize=function(){
+		setInputWidth('user_account','register_form');
+		setInputWidth('user_name','register_form');
+		setInputWidth('user_password','register_form');
+		setInputWidth('user_confirm','register_form');
+	}
+</script>
+</html>

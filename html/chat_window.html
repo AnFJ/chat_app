@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+
+<head>
+	<title>聊天窗口</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" type="text/css" href="../css/global_size.css">
+	<link rel="stylesheet" type="text/css" href="../css/chat_window.css">
+</head>
+<body>
+	<div class="head_nav">
+		<img class="back" onclick="window.location.href='../main.html'" src="../image/icon/back.png">
+		<h2 class="chat_object_name">我的朋友某仁</h2>
+		<img src="../image/icon/chat_object_info.png" class="chat_info">
+		<div class="change_container" >
+			<img onclick="showChatObjectContainer(this)" src="../image/icon/change_chat_object.png" class="change_btn">
+			<div style="display: none;" class="list_container">
+				<img class="up_arrow" src="../image/icon/up_arrow.png"/>
+				<div class="object_list_container" id="object_list_container">
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="main_window">
+		<div class="first_margin"></div>
+		<!-- <div class="chat_list_container">
+			<img name="left" src="../image/user_display_photo/other_dp.jpg" />
+			<div name="left" class="chat_info_container">
+				<p>最后一天了，得抓紧时间争取能够把这个程序昨完，然后再好好的休息吧
+				</p>
+			</div>
+		</div>
+		<div class="chat_list_container">
+			<img name="right" src="../image/user_display_photo/udp.jpg" />
+			<div name="right" class="chat_info_container">
+				<p>最后一天了，得抓紧时间争取能够把这个程序昨完，然后再好好的休息吧
+				</p>
+			</div>
+		</div> -->
+	</div>
+	<div class="send_container">
+		<textarea id='textarea' onpropertychange="MaxMe(this)" oninput="MaxMe(this)" onblur="Recover(this)" style="overflow:hidden"></textarea>
+		<img src="../image/icon/send_message.png" onclick=" sendChatMessage(this,'friend')">
+	</div>
+</body>
+<script type="text/javascript" src='../script_ui/main_ui.js'></script>
+<script type="text/javascript" src='../script/update_chat.js'></script>
+<script type="text/javascript">
+	window.onload=function(){
+		setChatTextareaWindth('textarea');
+		setFriendChatInfo();
+		showChatObjectsList('3');
+	}
+	window.onresize=function(){
+		setChatTextareaWindth('textarea');
+	}
+	setInterval(function(){
+		if(window.localStorage.recv_friend_state=="true")
+		{
+			window.localStorage.recv_friend_state='false';
+			recvChatMessage(window.localStorage.recv_friend_message,'3');
+			// alert(window.localStorage.recv_friend_message);
+		}
+		if(window.localStorage.target_friend_state=="true")
+		{
+			window.localStorage.target_friend_state="false";
+			window.location.href='chat_window.html';
+		}
+		if(window.localStorage.target_group_state=="true")
+		{
+			window.localStorage.target_group_state="false";
+			window.location.href='group_chat_window.html';
+		}
+	},10);
+</script>
+</html>
