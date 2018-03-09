@@ -1,0 +1,10 @@
+*{
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+html{
+	overflow-x: hidden;
+	font-size:62.5%;
+}
+input,button,select,textarea{outline:none}

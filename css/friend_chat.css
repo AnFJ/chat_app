@@ -1,0 +1,179 @@
+.search{
+	position:relative;
+	/* background-color: #92DBEF; */
+	width: 90%;
+	height: 7rem;
+	margin-top: 0.6rem;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+
+/* 设置好友搜索框 */
+.search_input_container{
+	 /*background-color:yellow; */
+	width:100%;
+	position:absolute;
+	top:4.2rem;
+}
+.search_input_container >input{
+	position:absolute;
+	background-color: rgba(0,0,0,0);
+	height: 2rem;
+	top:0;
+	left: 0;
+	width:100%;
+	border: solid 0.2rem #1296db;
+	border-top-left-radius:5rem 100%;
+	border-bottom-left-radius: 5rem 100%;
+	padding-left: 4rem;
+
+}
+.search_input_container >button{
+	position: absolute;
+	background: #1296db;
+	top:0;
+	right:0;
+	width: 8rem;
+	height: 2.4rem;
+	border: 0;
+	font-size: 1.5rem;
+	/*border: solid 0.2rem #ff1233;*/
+	border-top-right-radius: 5rem 100%;
+	border-bottom-right-radius: 5rem 100%;
+	text-align: center;
+	color:white;
+	
+}
+/*设置好友选择框*/
+.search_choose_setting_container{
+	height:2.3rem;
+	margin:auto;
+	background-color:yellow;
+	/* border:0.1rem solid red; */
+	padding-top:0.8rem;
+	padding-left:1rem;
+	padding-right:1rem;
+	background-color:#FDFDFD;
+	border-radius: 0.5rem;
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+    -moz-box-shadow: 0 10px 6px -6px #777;
+    box-shadow: 0 10px 6px -6px #777;
+}
+.cutting_line{
+	width:70%;
+	margin:auto;
+	border-bottom-color:#777;
+	border-bottom-width:1px;
+	border-bottom-style:solid;
+}
+.search_choose_setting{
+	font-size:1.5rem;
+	height:1.5rem;
+	background:url(../image/icon/search_choose_head.png) no-repeat;
+	background-size:1.5rem;
+	background-position:right;
+
+}
+
+.search_choose_setting_container:hover {
+	background-color:#D8ECF3;
+}
+#search_choose_bottom{
+	position:relative;
+	margin-top:1rem;
+	display:none;
+	z-index:1;
+}
+.up_arrow{
+	position:absolute;
+	width:1.5rem;
+	height:1.5rem;
+	background:url(../image/icon/up_arrow.png);
+	background-size:1.5rem;
+	right:1rem;
+	top:-1rem;
+}
+#add_friend{
+	background:url(../image/icon/add_friend.png) no-repeat;
+	background-size:1.5rem;
+	background-position:right;
+}
+
+#add_friend_containner:hover >.up_arrow{
+	background:url(../image/icon/up_arrow_focus.png);
+	background-size:1.5rem;
+}
+#delete_friend{
+	background:url(../image/icon/delete_friend.png) no-repeat;
+	background-size:1.5rem;
+	background-position:right;
+}
+
+/* 设置好友列表 */
+.friend_list_container{
+	position:relative;
+	margin-top:3rem;
+	width:100%;
+	height:15rem;
+	/* background-color:#eeff54; */
+}
+.friend_list{
+	position:relative;
+	height:5rem;
+	/* background-color:#55aaff; */
+	border-bottom-color:#B0BBBB;
+	border-bottom-width:1px;
+	border-bottom-style:solid;
+}
+.friend_list:hover{
+	background-color:#D8ECF3;
+}
+.friend_list >img{
+	height:4rem;
+	margin-top: 0.5rem;
+	margin-left: 0.5rem;
+	border-radius: 100%;
+}
+.friend_list >h3{
+	position:absolute;
+	top:0.7rem;
+	left:5rem;
+	font-size:1.5rem;
+	line-height: 1.8rem;
+	height:1.8rem;
+	overflow:hidden;
+	padding-right:5rem;
+}
+.friend_list >p{
+	position:absolute;
+	bottom:0.8rem;
+	left:5rem;
+	line-height: 1.4rem;
+	font-size:1.2rem;
+	height:1.4rem;
+	overflow:hidden;
+	padding-right:4.4rem;
+	/*background: red;*/
+}
+.friend_online_state{
+	position:absolute;
+	width:2rem;
+	height:2rem;
+	background:url(../image/icon/friend_online.png);
+	background-size:2rem;
+	right:2rem;
+	top:1.5rem;
+}
+.friend_offline_state{
+	position:absolute;
+	width:2rem;
+	height:2rem;
+	background:url(../image/icon/friend_offline.png);
+	background-size:2rem;
+	right:2rem;
+	top:1.5rem;
+}
+ 
+
+

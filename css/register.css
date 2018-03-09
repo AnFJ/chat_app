@@ -1,0 +1,67 @@
+/* 横屏（width>height） */
+@media screen and (orientation : landscape){
+	.register_container{
+		position:relative;
+		margin:auto;
+		width:40rem;
+		height:50rem;
+		margin-top:10rem;
+		/*background-color:#C4CFF6;*/
+	}
+}
+
+/* 竖屏（width<height） */
+@media screen and (orientation :  portrait){
+	.register_container{
+		margin-top: 10rem;
+		position:relative;
+		/*background-color:#C4CFF6;*/
+		height:30rem;
+		width:100%;
+	}            
+}
+/*返回头部栏*/
+.back_nav{
+	width: 100%;
+	height: 5rem;
+	background-color:#C4CFF6;
+	position: fixed;
+	top:0;
+	z-index: 2;
+}
+.back_nav >img{
+	margin-top: 1rem;
+	margin-left: 1.5rem;
+	width: 3rem;
+}
+/*注册信息*/
+.register_form{
+	position:relative;
+	width:84%;
+	margin:auto;
+	height:30rem;
+	/*background-color:yellow;*/
+}
+input[name^="user_"]{
+	font-size:2.0rem;
+	height:3rem;
+	/* background:red; */
+	margin-top: 2rem;
+	display:block;
+	border-bottom:solid 0.1rem black;
+	padding-left:4rem;
+	padding-bottom:0.5rem;
+	width:100%;
+}
+.register_button{
+	font-size:2rem;
+	margin-top:5.3rem;
+	height:4.3rem;
+	width:100%;
+	border-radius: 4rem;
+	background-color:#78C6F0
+}
+#submit{
+	margin-top:0.5rem;
+}
+

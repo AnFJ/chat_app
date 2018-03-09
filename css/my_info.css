@@ -1,0 +1,115 @@
+/* 横屏（width>height） */
+@media screen and (orientation : landscape){
+	.container{
+		position:relative;
+		margin:auto;
+		width:40rem;
+		/*height:60rem;*/
+		/*background-color:#C4CFF6;*/
+	}
+}
+
+/* 竖屏（width<height） */
+@media screen and (orientation :  portrait){
+	.container{
+		position:relative;
+		background-color:#C4CFF6;
+		/*height:100rem;*/
+		width:100%;
+	}         
+}
+/*用户头像，账号信息*/
+.display_photo{
+	position: relative;
+	margin-bottom: 2rem;
+	width: 100%;
+	/*background: red;*/
+	background:url(../image/user_display_photo/udp.jpg) no-repeat;
+	background-size:100%;
+}
+.background{
+	width: 100%;
+	position: absolute;
+	/*z-index: -1;*/
+	background:url(../image/user_display_photo/udp.jpg) no-repeat;
+	background-size:100%;
+	-webkit-filter: blur(0.5rem);
+    -moz-filter: blur(0.5rem);
+    -o-filter: blur(0.5rem);
+    -ms-filter: blur(0.5rem);
+    filter: blur(0.5rem);
+}
+.display_photo_container{
+	top:15%;
+	left:32%; 
+	position:absolute;
+	width:36%;
+	margin:auto;
+	background: blue;
+}
+.display_photo_container >img{
+	width: 100%;
+	position: absolute;
+	border-radius: 100%;
+}
+.user_info{
+	width: 100%;
+	height: 40%;
+	text-align: center;
+	position: absolute;
+	top:60%;
+}
+.user_info >p{
+	margin-top: 1%;
+	margin-bottom: 5%;
+}
+/*用户信息栏目*/
+.menu_container{
+	width: 100%;
+	margin-bottom: 1rem;
+	/*background: red;*/
+	-webkit-box-shadow: 0 0.2rem 0.2rem 0px #777;
+    -moz-box-shadow: 0 0.2rem 0.2rem 0px #777;
+    box-shadow: 0 0.2rem 0.2rem 0px #777;
+}
+.account_info{
+	border-bottom: solid #B0BBBB 0.5px;
+	position: relative;
+	height: 5rem;
+	font-size: 1.5rem;
+}
+.account_info >.left_position{
+	position: absolute;
+	left: 0;
+	padding-left: 1rem;
+	top:1.75rem;
+}
+.account_info >.right_position{
+	position: absolute;
+	right: 1rem;
+	top:1.75rem;
+}
+#user_display_photo >.right_position{
+	top:0.5rem;
+	right: 2rem;
+	background:url(../image/user_display_photo/udp.jpg) no-repeat;
+	background-size:4rem;
+	height: 4rem;
+	width: 4rem;
+	border-radius: 100%;
+}
+
+/*修改信息，退出登录*/
+#menu_container{
+	padding-top: 1.75rem;
+	height: 3.25rem;
+	text-align: center;
+	font-size: 1.5rem;
+}
+
+#exit_account{
+	padding-top: 1.75rem;
+	height: 3.25rem;
+	text-align: center;
+	font-size: 1.5rem;
+}

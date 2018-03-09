@@ -1,0 +1,16 @@
+@keyframes showDiv{
+	from{opacity:0;}
+	to{opacity:1}
+}
+@-webkit-keyframes showDiv{
+	from{opacity:0;}
+	to{opacity:1}
+}
+@keyframes notShowDiv{
+	from{opacity:1;}
+	to{opacity:0;}
+}
+@-webkit-keyframes notShowDiv{
+	from{opacity:1;}
+	to{opacity:0;}
+}

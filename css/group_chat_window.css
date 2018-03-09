@@ -1,0 +1,215 @@
+/*聊天顶部栏*/
+.head_nav{
+	width: 100%;
+	height: 5rem;
+	background-color:#C4CFF6;
+	position: fixed;
+	top:0;
+	z-index: 2;
+}
+.head_nav >.back{
+	margin-top: 1rem;
+	margin-left: 1.5rem;
+	width: 3rem;
+}
+.head_nav >.chat_object_name{
+	position: absolute;
+	bottom: 1.6rem;
+	left:5.7rem;
+	font-size:1.7rem;
+	line-height: 1.8rem;
+	height:1.8rem;
+	overflow:hidden;
+	padding-right:5.5rem;
+}
+.head_nav >.chat_info{
+	position: absolute;
+	width: 3rem;
+	bottom: 1rem;
+	right: 1rem;
+}
+/*改变聊天对象*/
+.head_nav >.change_container{
+	position: absolute;
+	top:0;
+	right: 0;
+	width: 50%;
+	/*background: red;*/
+}
+.change_container >.change_btn{
+	position: absolute;
+	width: 3rem;
+	top: 1rem;
+	right: 5.6rem;
+}
+/*.list_container{
+	display: none;
+}*/
+.list_container >.up_arrow{
+	background: white;
+	position: absolute;
+	z-index: 2;
+	height: 1rem;
+	width: 2rem;
+	top:5.1rem;
+	right: 6.1rem;
+	border-top-right-radius: 50% 100%;
+	border-top-left-radius: 50% 100%;
+	box-shadow: 0rem -0.1rem 0.1rem 0rem #777;
+}
+.object_list_container{
+	position: absolute;
+	width: 100%;
+	right: 1rem;
+	top:6.1rem;
+	/*max-height: 30rem;*/
+	height: 10rem;
+	background: white;
+	border-radius: 0.5rem;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+	box-shadow: 0.1rem 0.2rem 0.5rem 0.1rem #777;
+	overflow-y: auto;
+}
+.object_list_container >.object_list{
+	position: relative;
+	width: 100%;
+	margin-right: 3rem;
+	height: 4rem;
+	/*background: red;*/
+	border-bottom: 1px solid black;
+
+}
+.object_list:hover{
+	background: #D8ECF3;
+}
+.object_list >.notice_number{
+	border-radius: 100%;
+	position: absolute;
+	left: 0.5rem;
+	width: 1.5rem;
+	top:1rem;
+}
+.object_list >.other_object{
+	position: absolute;
+	top:1.2rem;
+	left: 2.5rem;
+	font-size:1.5rem;
+	line-height: 1.6rem;
+	height:1.6rem;
+	overflow:hidden;
+	padding-right: 2.8rem;
+}
+.object_list >.delete_temp_object{
+	position: absolute;
+	width: 2rem;
+	right: 0.5rem;
+	top:1rem;
+}
+::-webkit-scrollbar{width:0;}
+/*发送消息框*/
+.send_container{
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 5rem;
+	/*background: red;*/
+}
+.send_container >textarea{
+/*	overflow:visible;*/
+	resize: none;
+	position: absolute;
+	bottom: 1rem;
+	left: 0;
+	width: auto;
+	border: 1px solid black;
+	border-radius: 1.5rem;
+	height: 2.4rem;
+	padding-left: 2rem;
+	padding-right: 2rem;
+	padding-top: 0.3rem;
+	padding-bottom: 0.3rem;
+	max-height: 20rem;
+	font-size: 2.5rem;
+	line-height: 2.5rem;
+}
+.send_container >img{
+	position: absolute;
+	right: 1rem;
+	bottom: 1rem;
+	width: 3rem;
+
+}
+/*聊天信息UI*/
+.first_margin{
+	width: 100%;
+	height: 5rem;
+	background: blue;
+}
+.chat_list_container{
+	width: 100%;
+	position: relative;
+	/*background: red;*/
+	/*height: 40rem;*/
+	/*border: 5px solid black;*/
+}
+.chat_list_container >img{
+	width: 4rem;
+	border-radius: 100%;
+	position: absolute;
+	top:-2rem;
+	/*left: 1rem;*/
+	/*float: left;*/
+}
+.chat_list_container >h4{
+	position: absolute;
+	/*background: red;*/
+	top:-2rem;
+	font-size: 1.5rem;
+	line-height:2rem;
+}
+.chat_list_container >h4[name^="left"]{
+	left: 5.5rem;
+}
+.chat_list_container >h4[name^="right"]{
+	right: 5.5rem;
+}
+.chat_list_container >div{
+	background: #6CDDDD;
+	margin-top:3rem;
+	padding:1rem;
+	border-radius: 1rem;
+	/*float: left;*/
+	/*display: inline;*/
+}
+
+.chat_list_container >img[name^="left"]
+{
+	left: 1rem;
+}
+.chat_list_container >div[name^="left"]
+{
+	margin-left: 5.5rem;
+	margin-right: 4rem;
+}
+.chat_list_container >img[name^="right"]
+{
+	right: 1rem;
+}
+.chat_list_container >div[name^="right"]
+{
+
+	margin-left: 4rem;
+	margin-right: 5.5rem;
+	direction: rtl;
+	text-align:right;
+}
+.chat_info_container >p{
+	width: 100%;
+	word-break:break-word;
+	float: none;
+	display: inline;
+	font-size: 1.5rem;
+	line-height:2rem;
+	/*background: yellow;*/
+}

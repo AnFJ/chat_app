@@ -1,0 +1,111 @@
+/* 横屏（width>height） */
+@media screen and (orientation : landscape){
+	.login_container{
+		position:relative;
+		margin:auto;
+		width:40rem;
+		height:50rem;
+		margin-top:10rem;
+		/*background-color:#C4CFF6;*/
+	}
+	.buttom_agree_info{
+		position:absolute;
+		z-index:2;
+		bottom:0px;
+	}
+}
+
+/* 竖屏（width<height） */
+@media screen and (orientation :  portrait){
+	.login_container{
+		position:relative;
+		/*background-color:#C4CFF6;*/
+		height:30rem;
+		width:100%;
+	}
+	.buttom_agree_info{
+		position:fixed;
+		z-index:2;
+		bottom:0px;
+	}
+}
+.login_inner_container{
+	position:absolute;
+	top:10rem;
+	width:100%;
+}
+/* 登陆框 */
+.login_inner_container >.login_div{
+	position:relative;
+	width:84%;
+	margin:auto;
+	height:30rem;
+	/*background-color:yellow;*/
+}
+.login_div >input[name^="user_"]{
+	font-size:2.0rem;
+	height:3rem;
+	/* background:red; */
+	display:block;
+	border-bottom:solid 0.1rem black;
+	padding-left:4rem;
+	padding-bottom:0.5rem;
+	width:100%;
+}
+#user_password{
+	margin-top:2rem;
+	
+}
+#login_button{
+	text-align: center;
+	font-size:2rem;
+	margin-top:5.3rem;
+	height:4.3rem;
+	width:100%;
+	border-radius: 4rem;
+	background-color:#78C6F0;
+}
+/* 登陆选项（记住密码，注册） */
+.login_setting{
+	margin-top:1.2rem;
+	width:100%;
+	position:relative;
+}
+.login_setting >p{
+	height:1rem;
+	font-size:1rem;
+	/* background:blue; */
+	padding-left:1.4rem;
+	position:absolute;
+	left:0;
+	background:url(../image/icon/user_account_save.png) no-repeat;
+	background-size:1.4rem;
+	background-position:left;
+}
+
+.login_setting >a{
+	position:absolute;
+	top:0;
+	right:0;
+	color:#78C6F0;
+	font-size:1rem;
+	text-decoration:none;
+}
+/* 底部声明协议 */
+.buttom_agree_info{
+	width:13.4rem;
+}
+.buttom_agree_info >p{
+	font-size:1rem;
+	padding-left:1.4rem;
+	padding-bottom:1.5rem;
+	background:url(../image/icon/agree_use.png) no-repeat;
+	background-size:1.3rem;
+	background-position:center-left;
+}
+p >a{
+	text-decoration:none;
+	color:#78C6F0;
+	font-size:1rem;
+}
+
